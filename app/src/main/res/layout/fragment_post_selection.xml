@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Controller.Fragments.PostSelectionFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout_add_post_options"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/add_post_options_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="15dp"
+                    >
+
+                <TextView
+                        android:id="@+id/profile_fragment_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add an option"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_centerVertical="true"
+
+                        >
+
+                </TextView>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/app_bar_layout_add_post_options"
+
+            >
+
+        <ImageButton
+                android:id="@+id/image_btn_add_post"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_layout_design"
+             android:scaleType="fitCenter"
+                android:src="@drawable/image" />
+
+        <ImageButton
+                android:id="@+id/text_btn_add_post"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/edittext_layout_design"
+                android:layout_marginTop="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add_text" />
+
+        <ImageButton
+                android:id="@+id/support_group_btn_add_post"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/edittext_layout_design"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/contact" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="87dp"
+            android:background="@drawable/user_item_layout_border_design"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.436" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile_image_searchuser_name_search_layout"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/add_profile_image"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.426">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <TextView
+            android:id="@+id/user_name_search_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="username"
+            android:textColor="@color/design_default_color_on_secondary"
+            app:layout_constraintStart_toEndOf="@+id/user_profile_image_searchuser_name_search_layout"
+            app:layout_constraintTop_toTopOf="@+id/user_profile_image_searchuser_name_search_layout" />
+
+    <TextView
+            android:id="@+id/user_fullname_search_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="fullname"
+            android:textColor="@color/design_default_color_on_secondary"
+            app:layout_constraintBottom_toBottomOf="@+id/user_profile_image_searchuser_name_search_layout"
+            app:layout_constraintStart_toStartOf="@+id/user_name_search_layout"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_search_layout" />
+
+    <TextView
+            android:id="@+id/support_btn_search_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="200dp"
+            android:text="Support"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/user_fullname_search_layout"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/user_fullname_search_layout" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

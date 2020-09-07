@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "289255945347",
+    "firebase_url": "https://supgro.firebaseio.com",
+    "project_id": "supgro",
+    "storage_bucket": "supgro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289255945347:android:bdd6ddd6de7b58b02a17b6",
+        "android_client_info": {
+          "package_name": "supgro.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289255945347-aei4ks2s5bj8mdvj0iueb1kum7rv8425.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1JV_mHL3twvB3BEU1532H2TxjzX_uJOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289255945347-aei4ks2s5bj8mdvj0iueb1kum7rv8425.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
