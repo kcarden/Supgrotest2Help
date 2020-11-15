@@ -11,6 +11,7 @@ import androidx.annotation.NonNull
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -30,7 +31,7 @@ import kotlin.coroutines.coroutineContext
 
 class NotificationAdapter(val mContext: Context, val mNotification: List<Notification>): RecyclerView.Adapter<NotificationAdapter.Holder>() {
 
-
+    private val onNavigationView: Int = R.id.nav_notifications
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(mContext).inflate(R.layout.notifications_item_layout, parent, false)
         return Holder(view)
@@ -44,9 +45,12 @@ class NotificationAdapter(val mContext: Context, val mNotification: List<Notific
 
         val notification = mNotification[position]
 
+
         if (notification.getText().equals("started supporting you")){
 
             holder.commentText.text = "started supporting you"
+
+            holder.newIcon.visibility = View.VISIBLE
 
         }else if (notification.getText().equals("liked your post")){
 
@@ -55,9 +59,16 @@ class NotificationAdapter(val mContext: Context, val mNotification: List<Notific
         }else if (notification.getText().contains("commented:")){
 
             holder.commentText.text = notification.getText().replace("commented:", "commented: ")
+
+        }else if(notification.getText().equals("saved your post")){
+
+            holder.commentText.text = "saved your post!"
         }else{
 
             holder.commentText.text = notification.getText()
+
+            holder.newIcon.visibility = View.GONE
+
         }
 
 
@@ -112,6 +123,9 @@ class NotificationAdapter(val mContext: Context, val mNotification: List<Notific
         var postImage: ImageView = itemView.findViewById(R.id.notification_post_image)
         var userName: TextView = itemView.findViewById(R.id.username_notification)
         var commentText: TextView = itemView.findViewById(R.id.comment_notification)
+        var newIcon: ImageView = itemView.findViewById(R.id.new_notifications_icon)
+
+
 
 
     }

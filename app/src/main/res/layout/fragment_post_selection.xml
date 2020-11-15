@@ -49,28 +49,40 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_below="@+id/app_bar_layout_add_post_options"
+            android:gravity="center"
 
-            >
+            android:orientation="vertical">
 
         <ImageButton
                 android:id="@+id/image_btn_add_post"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edittext_layout_design"
-             android:scaleType="fitCenter"
-                android:src="@drawable/image" />
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image"
+                android:visibility="gone" />
+
+        <TextView
+                android:id="@+id/text_btn_add_secondType_post"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/text_post_layout"
+                android:gravity="center"
+                android:text="New Text Type!"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         <ImageButton
                 android:id="@+id/text_btn_add_post"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:background="@drawable/edittext_layout_design"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_layout_design"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
@@ -80,12 +92,15 @@
                 android:id="@+id/support_group_btn_add_post"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:background="@drawable/edittext_layout_design"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_layout_design"
+                android:paddingTop="5dp"
+
+                android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/contact" />
+                android:src="@drawable/contact"
+                android:visibility="gone" />
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Controller.Login_Activity" android:background="@android:color/holo_red_light">
+        tools:context=".Controller.Service.Login_Activity" android:background="@android:color/holo_red_light">
     <ImageView
             android:layout_width="189dp"
             android:layout_height="176dp" app:srcCompat="@drawable/supgrologo"

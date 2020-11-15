@@ -1,5 +1,7 @@
 package supgro.com.Controller.Model
 
+import android.widget.Spinner
+
 class User {
 
     private var username: String = ""
@@ -7,16 +9,18 @@ class User {
     private var uid: String = ""
     private var fullname: String = ""
     private var about: String = ""
+    private var struggle: String = ""
 
 
     constructor()
 
-    constructor(username: String, image: String, uid: String, fullname: String){
+    constructor(username: String, image: String, uid: String, fullname: String, struggle: String){
         this.username = username
         this.image = image
         this.uid = uid
         this.fullname = fullname
         this.about = about
+        this.struggle = struggle
     }
 
     fun getUsername(): String{
@@ -53,5 +57,13 @@ class User {
     fun setAbout(about: String){
         this.about = about
     }
+    //
+    fun getStruggle(): String{
+        return struggle
+    }
+    fun setStruggle(struggle: String){
+        this.struggle = struggle
+    }
+
 
 }

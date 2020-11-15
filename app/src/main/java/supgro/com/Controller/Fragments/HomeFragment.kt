@@ -29,7 +29,6 @@ class HomeFragment : Fragment() {
 
 
 
-
            override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -57,6 +56,8 @@ class HomeFragment : Fragment() {
 
 
 
+
+
                checkSupportings()
 
 
@@ -69,14 +70,17 @@ class HomeFragment : Fragment() {
 
         }
 // this is to check on the post of people who you are supporting/following
+    //This is saying your only seeing the post of the people you are following
     private fun checkSupportings() {
         supportingList = ArrayList()
-
-        val supportingRef = FirebaseDatabase.getInstance().reference
-                .child("Support").child(FirebaseAuth.getInstance().currentUser!!.uid)
+//issue fixed because of removing null
+        val supportingRef = FirebaseAuth.getInstance().currentUser?.uid?.let {
+            FirebaseDatabase.getInstance().reference
+                .child("Support").child(it)
                 .child("Supporting")
+        }
 
-        supportingRef.addValueEventListener(object : ValueEventListener{
+        supportingRef?.addValueEventListener(object : ValueEventListener{
 
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()){
@@ -87,8 +91,8 @@ class HomeFragment : Fragment() {
                     }
 
 
-                    retrieveImagePost()
-                    retrieveTextPost()
+                    retrieveTextandImagePost()
+                    //retrieveTextPost()
 
                 }
             }
@@ -103,9 +107,9 @@ class HomeFragment : Fragment() {
 
     }
 
-  private fun retrieveImagePost() {
+  private fun retrieveTextandImagePost() {
         val imagePostRef = FirebaseDatabase.getInstance().reference
-            .child("Posts")
+            .child("Post")
 
       imagePostRef.addValueEventListener(object : ValueEventListener{
 
@@ -120,10 +124,17 @@ class HomeFragment : Fragment() {
                         if (post!!.getPublisher() == id.toString()){
 
                             postList!!.add(post)
+
+
+
                         }
 
                        postAdapter!!.notifyDataSetChanged()
+
+
+
                     }
+
                 }
             }
 
@@ -132,36 +143,8 @@ class HomeFragment : Fragment() {
             }
         })
 
-    }
-
-    private fun retrieveTextPost() {
-        val textPostRef = FirebaseDatabase.getInstance().reference
-            .child("Text Post")
-
-        textPostRef.addValueEventListener(object : ValueEventListener{
-
-            override fun onDataChange(p0: DataSnapshot) {
-                postList?.clear()
-                for (snapshot in p0.children){
-
-                    val post = snapshot.getValue(Post::class.java)
-
-                    for (id in (supportingList as ArrayList<String>)){
-
-                        if (post!!.getPublisher() == id.toString()){
-
-                            postList!!.add(post)
-                        }
-
-                        postAdapter!!.notifyDataSetChanged()
-                    }
-                }
-            }
-
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
 
     }
+
+
 }

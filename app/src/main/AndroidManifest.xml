@@ -9,19 +9,41 @@
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
+            android:label="SupGro"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Controller.Service.AddTextPostActivitytest"></activity>
-        <activity android:name=".Controller.SupportGroupActivity" />
-        <activity android:name=".Controller.ShowUsersActivity" />
-        <activity android:name=".Controller.CommentsActivity" />
-        <activity android:name=".Controller.AddPostActivity" />
-        <activity android:name=".Controller.AccountSetting_Activity" />
-        <activity android:name=".Controller.MainActivity" />
-        <activity android:name=".Controller.Register_Activity" />
-        <activity android:name=".Controller.Login_Activity">
+        <activity android:name=".Controller.Service.Edit_Post_Activity"></activity>
+        <activity android:name=".Controller.Service.AddTypeTwoTextPostActivity" />
+        <!--
+        <activity android:name=".Controller.Service.Registration_Accomplish_Activity"></activity>
+        <activity android:name=".Controller.Service.Registration_Struggle_Activity" />
+        -->
+        <activity
+                android:name=".Controller.Service.MainActivity"
+                android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Controller.Service.AddTextPostActivity" />
+        <activity android:name=".Controller.Service.SupportGroupActivity" />
+        <activity android:name=".Controller.Service.ShowUsersActivity" />
+        <activity
+                android:name=".Controller.Service.CommentsActivity"
+                android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Controller.Service.AddPostActivity" />
+        <activity
+                android:name=".Controller.Service.AccountSetting_Activity"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".Controller.Service.Register_Activity"
+                android:windowSoftInputMode="adjustPan" />
+        <activity
+                android:name=".Controller.Service.Login_Activity"
+                android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

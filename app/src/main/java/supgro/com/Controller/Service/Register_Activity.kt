@@ -1,11 +1,12 @@
-package supgro.com.Controller
+package supgro.com.Controller.Service
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.auth.FirebaseAuth
 import android.util.Log
-import android.widget.Toast
+import android.view.View
+import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.register_activity_layout.*
@@ -14,14 +15,46 @@ import kotlinx.android.synthetic.main.register_activity_layout.*
 class Register_Activity : AppCompatActivity() {
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(supgro.com.R.layout.register_activity_layout)
+
+       /* val customList = listOf("first", "second", "third", "foruth")
+        val adapter = ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, customList)
+        struggles.adapter = adapter*/
+
+
+
+      struggles.onItemSelectedListener = object : AdapterView.OnItemSelectedListener  {
+
+          override fun onNothingSelected(p0: AdapterView<*>?) {
+
+          }
+
+          override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+
+
+              if(struggles.equals("Struggles") ){
+
+                  null
+
+
+              }else{
+
+                 // val struggletext = struggles.selectedItem.toString()
+                  Toast.makeText(this@Register_Activity, "You selected ${adapterView?.getItemAtPosition(position).toString()}", Toast.LENGTH_LONG).show()
+              }
+
+
+          }
+      }
 
         val username = usernameRegEdTxt.text.toString()
 
 
         signupRegBtn.setOnClickListener {
+
             performRegister()
 
 
@@ -39,11 +72,12 @@ class Register_Activity : AppCompatActivity() {
         val confirmemail = confirmEmailRegEdTxt
         val confirmpassword = comfirmPasswordRegEdTxt.text.toString()
         val fullname = fullnameRegEdTxt.text.toString()
-        val gender = genderRegEdTxt.text.toString().trim()
+       // val gender = genderRegEdTxt.text.toString().trim()
         val age = ageRegEdTxt.text.toString().trim()
-        val struggle = strugglesRegEdTxt.text.toString().trim()
+       //val struggle = struggletext.text.toString()
+        val struggle = struggles.selectedItem.toString()
 
-        if (email.isEmpty() || password.isEmpty() || gender.isEmpty() || age.isEmpty() || struggle.isEmpty() || fullname.isEmpty()) {
+        if (email.isEmpty() || password.isEmpty() || age.isEmpty() || fullname.isEmpty()) {
             Toast.makeText(this, "Please enter text in email/pw", Toast.LENGTH_SHORT).show()
 
         }else if(!comfirmPasswordRegEdTxt.getText().toString().equals(comfirmPasswordRegEdTxt.getText().toString()) || !confirmEmailRegEdTxt.getText().toString().equals(confirmEmailRegEdTxt.getText().toString()) )
@@ -56,7 +90,7 @@ class Register_Activity : AppCompatActivity() {
                 "You have successfully created an account!",
                 Toast.LENGTH_SHORT
             ).show()
-           /* val intent = Intent(this, MainFeedActivity::class.java)
+          /*val intent = Intent(this, MainFeedActivity::class.java)
             startActivity(intent)*/
         }
         Log.d("RegisterActivity", "Email is: $email")
@@ -65,7 +99,7 @@ class Register_Activity : AppCompatActivity() {
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful)
-                    saveUserToFireBaseDatabase( username, email, gender, age, struggle, uid = String())
+                    saveUserToFireBaseDatabase( username, email, age, uid = String())
 
                 //else
                 Log.d("RegisterActivity", "Sucessfully creaded uid: ${it.result?.user?.uid}")
@@ -78,7 +112,7 @@ class Register_Activity : AppCompatActivity() {
             }
     }
 
-    private fun saveUserToFireBaseDatabase( username: String, email: String, gender: String, age: String, struggle: String, uid: String) {
+    private fun saveUserToFireBaseDatabase( username: String, email: String, age: String, uid: String) {
 
         val currentUserID = FirebaseAuth.getInstance().currentUser!!.uid
         val usersRef: DatabaseReference = FirebaseDatabase.getInstance().reference.child("username")
@@ -87,10 +121,10 @@ class Register_Activity : AppCompatActivity() {
         userMap["uid"] = currentUserID
         userMap["username"] = usernameRegEdTxt.text.toString().toLowerCase()
         userMap["email"] = emailRegEdTxt.text.toString()
-        userMap["gender"] = genderRegEdTxt.text.toString().toLowerCase()
+        //userMap["gender"] = genderRegEdTxt.text.toString().toLowerCase()
         userMap["age"] = ageRegEdTxt.text.toString()
-        userMap["struggle"] = strugglesRegEdTxt.text.toString().toLowerCase()
-        userMap["About"] = strugglesRegEdTxt.text.toString().toLowerCase()
+        userMap["struggle"] = struggles.selectedItem.toString()
+       // userMap["About"] = strugglesRegEdTxt.text.toString().toLowerCase()
         userMap["fullname"] = fullnameRegEdTxt.text.toString().toLowerCase()
         userMap["image"] = "https://firebasestorage.googleapis.com/v0/b/supgro.appspot.com/o/add%20(2).png?alt=media&token=bbe56c23-ae7c-4c8f-bd41-1e875539473e"
 
@@ -102,8 +136,8 @@ class Register_Activity : AppCompatActivity() {
                     /*FirebaseDatabase.getInstance().reference
                         .child("Support").child(currentUserID)
                         .child("Supporting").child(currentUserID)
-                        .setValue(true)*/
-
+                        .setValue(true)
+*/
 
 
                         FirebaseDatabase.getInstance().reference.child("Support").child(currentUserID)

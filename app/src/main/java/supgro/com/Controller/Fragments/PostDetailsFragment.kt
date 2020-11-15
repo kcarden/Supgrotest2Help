@@ -63,7 +63,7 @@ class PostDetailsFragment : Fragment() {
 
     private fun retrieveImagePost() {
         val postRef = FirebaseDatabase.getInstance().reference
-            .child("Posts")
+            .child("Post1")
             .child(postId)
 
         postRef.addValueEventListener(object : ValueEventListener {

@@ -16,11 +16,9 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
-import kotlinx.android.synthetic.main.fragment_profile.*
 import supgro.com.Controller.Fragments.ProfileFragment
-import supgro.com.Controller.MainActivity
+import supgro.com.Controller.Service.MainActivity
 import supgro.com.Controller.Model.User
 import supgro.com.R
 import supgro.com.R.id.support_btn_search_layout
@@ -49,7 +47,8 @@ class UserAdapter (var mContext: Context,
             .placeholder(R.drawable.add_profile_image)
             .into(holder.userProfileImage)
         holder.username.text = user.getUsername()
-        holder.fullname.text = user.getFullName()
+       // holder.fullname.text = user.getFullName()
+        holder.strugglesview.text = user.getStruggle()
 
 
 
@@ -57,7 +56,7 @@ class UserAdapter (var mContext: Context,
 
         //this is when user clicks anywhere on users found in search, it will go to their page
         holder.itemView.setOnClickListener(View.OnClickListener{
-       if (isFragment){
+
                val pref = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit()
                pref.putString("profileId", user.getUid())
                pref.apply()
@@ -66,11 +65,10 @@ class UserAdapter (var mContext: Context,
                    .replace(R.id.fragment_container, ProfileFragment()).commit()
 
 
-      }else{
-           val intent = Intent(mContext, MainActivity::class.java)
+          val intent = Intent(mContext, MainActivity::class.java)
            intent.putExtra("publisherId", user.getUid())
            mContext.startActivity(intent)
-       }
+
 
        })
         
@@ -141,9 +139,10 @@ class UserAdapter (var mContext: Context,
     inner class Holder(@NonNull itemView: View) : RecyclerView.ViewHolder(itemView) {
 
        var username: TextView = itemView.findViewById(R.id.user_name_search_layout)
-        var fullname:TextView = itemView.findViewById(R.id.user_fullname_search_layout)
+       // var fullname:TextView = itemView.findViewById(R.id.user_fullname_search_layout)
        var supportbtn: TextView = itemView.findViewById(support_btn_search_layout)
         var userProfileImage: CircleImageView = itemView.findViewById(R.id.user_profile_image_searchuser_name_search_layout)
+        var strugglesview: TextView = itemView.findViewById(R.id.struggles_selection)
 
 
     }

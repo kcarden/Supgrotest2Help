@@ -7,7 +7,7 @@ class TextPost {
     private var publisher: String = ""
 
     constructor()
-    constructor(postid: String, PostText: String, publisher: String) {
+    constructor(postid: String, posttext: String, publisher: String) {
         this.postid = postid
         this.posttext = posttext
         this.publisher = publisher

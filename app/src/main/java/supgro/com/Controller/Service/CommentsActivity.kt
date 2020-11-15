@@ -1,4 +1,4 @@
-package supgro.com.Controller
+package supgro.com.Controller.Service
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +13,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.account_setting_activity.*
 import kotlinx.android.synthetic.main.activity_comments.*
 import supgro.com.Controller.Adapter.Comments_Adapter
 import supgro.com.Controller.Model.Comment
@@ -34,10 +33,11 @@ class CommentsActivity : AppCompatActivity() {
 
 
         val intent = intent
-        postId = intent.getStringExtra("postId")
-        publisherId = intent.getStringExtra("publisherId")
+        postId = intent.getStringExtra("postId")!!
+        publisherId = intent.getStringExtra("publisherId")!!
 
         firebaseUser = FirebaseAuth.getInstance().currentUser
+
 
 
         var recyclerView: RecyclerView
@@ -71,12 +71,12 @@ class CommentsActivity : AppCompatActivity() {
 
     }
 
-
+//adding the comment to the database
 
     private fun addcomment() {
         val commentsRef = FirebaseDatabase.getInstance().reference
             .child("Comments")
-            .child(postId!!)
+            .child(postId)
 
         val commentsMap = HashMap<String, Any>()
         commentsMap["comment"] = add_comment!!.text.toString()
@@ -91,7 +91,7 @@ class CommentsActivity : AppCompatActivity() {
 
 
     }
-
+//Retriving the user who is commenting, info
     private fun retriveUserInfo(){
 
         val userRef = FirebaseDatabase.getInstance().reference
@@ -125,7 +125,7 @@ class CommentsActivity : AppCompatActivity() {
 
         val postRef = FirebaseDatabase.getInstance().reference
             .child("Posts")
-            .child(postId!!).child("postimage")
+            .child(postId).child("postimage")
 
         postRef.addValueEventListener(object: ValueEventListener {
 
@@ -150,11 +150,13 @@ class CommentsActivity : AppCompatActivity() {
         })
     }
 
+    //displays the comment on the screen
     private fun readComments(){
 
         val commentsRef = FirebaseDatabase.getInstance().reference
             .child("Comments")
             .child(postId)
+
 
         commentsRef.addValueEventListener(object : ValueEventListener{
 
@@ -182,13 +184,13 @@ class CommentsActivity : AppCompatActivity() {
 
         val notiRef = FirebaseDatabase.getInstance().reference
             .child("Notifications")
-            .child(publisherId!!)
+            .child(publisherId)
 
         val notiMap = HashMap<String, Any>()
 
         //this is the person who will like my stuff
         notiMap["userid"] = firebaseUser!!.uid
-        notiMap["text"] = "commented: " + add_comment!!.text.toString()
+        notiMap["text"] = "commented:" + add_comment!!.text.toString()
         notiMap["postId"] = postId
         notiMap["ispost"] = true
 

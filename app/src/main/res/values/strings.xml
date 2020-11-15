@@ -7,4 +7,21 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main_feed">MainActivity</string>
+    <string name="postCountTxt">0</string>
+    <string name="edit_profile">Edit Profile</string>
+
+    <string-array name="struggles">
+        <item>Struggles</item>
+        <item>self-harm</item>
+        <item>Depression</item>
+        <item>Ahdh</item>
+        <item>Bipolar Disorder</item>
+        <item>(ED)Eating Disorder</item>
+        <item>(PTSD)Post Traumatic Stress Disorder</item>
+        <item>(ACE)Adverse childhood experiences</item>
+        <item>stress </item>
+        <item>Other</item>
+    </string-array>
+
+
 </resources>

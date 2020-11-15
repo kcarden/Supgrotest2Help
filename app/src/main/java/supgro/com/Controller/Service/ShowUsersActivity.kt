@@ -1,4 +1,4 @@
-package supgro.com.Controller
+package supgro.com.Controller.Service
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,8 +10,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.main.fragment_profile.view.*
-import kotlinx.android.synthetic.main.fragment_search.view.*
 import supgro.com.Controller.Adapter.UserAdapter
 import supgro.com.Controller.Model.User
 import supgro.com.R
@@ -31,8 +29,8 @@ class ShowUsersActivity : AppCompatActivity() {
         setContentView(R.layout.activity_show_users)
 
         val intent = intent!!
-        id = intent.getStringExtra("id")
-        title = intent.getStringExtra("title")
+        id = intent.getStringExtra("id")!!
+        title = intent.getStringExtra("title")!!
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)

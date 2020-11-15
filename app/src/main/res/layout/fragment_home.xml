@@ -11,7 +11,9 @@
     <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout_home"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            >
 
 
         <androidx.appcompat.widget.Toolbar
@@ -45,20 +47,33 @@
 
         </androidx.appcompat.widget.Toolbar>
 
+
+
     </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/app_bar_layout_home"
+            android:src="@drawable/gradient_bg" />
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_View_Home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/app_bar_layout_home" />
+            android:layout_below="@+id/imageView4"
+            android:layout_marginTop="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_View_Home_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:layout_below="@+id/app_bar_layout_home" />
+            android:layout_below="@+id/imageView4"
+            android:layout_marginTop="8dp" />
 
 
 </RelativeLayout>

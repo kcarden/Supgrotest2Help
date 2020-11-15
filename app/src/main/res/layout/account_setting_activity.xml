@@ -4,7 +4,9 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Controller.AccountSetting_Activity">
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        tools:context=".Controller.Service.AccountSetting_Activity">
 
     <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar_layout_Account_Setting"
@@ -72,132 +74,152 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
-<ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/app_bar_layout_Account_Setting">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:layout_below="@id/app_bar_layout_Account_Setting">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/add_account_setting_image"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/add_profile_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-        </de.hdodenhof.circleimageview.CircleImageView>
-
-        <TextView
-                android:id="@+id/change_image_txt_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Change Image"
-                android:textColor="@color/design_default_color_primary"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/add_account_setting_image" />
-
-        <EditText
-                android:id="@+id/fullname_account_setting_txt"
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:hint="Full Name"
-                android:inputType="textPersonName"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/change_image_txt_btn" />
+                android:layout_height="match_parent">
 
-        <EditText
-                android:id="@+id/username_account_setting_txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:hint="Username"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:inputType="textPersonName"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fullname_account_setting_txt" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/add_account_setting_image"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/add_profile_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-                android:id="@+id/about_account_setting_txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:hint="About: max space 90"
-                android:inputType="textPersonName"
-                android:maxLength="90"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/username_account_setting_txt" />
+            </de.hdodenhof.circleimageview.CircleImageView>
 
-        <EditText
-                android:id="@+id/website_account_setting_txt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:hint="Website"
-                android:inputType="textPersonName"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/about_account_setting_txt" />
+            <TextView
+                    android:id="@+id/change_image_txt_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Change Image"
+                    android:textColor="@color/design_default_color_primary"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_account_setting_image" />
 
-        <Button
-                android:id="@+id/logout_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Logout"
-                app:layout_constraintTop_toBottomOf="@+id/website_account_setting_txt"
-                tools:layout_editor_absoluteX="-32dp" />
+            <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/logout_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/change_image_txt_btn">
 
-        <Button
-                android:id="@+id/delete_account_Btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Delete Account"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/logout_btn"
-                app:layout_constraintVertical_bias="0.0"
-                tools:layout_editor_absoluteX="0dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                        android:id="@+id/fullname_account_setting_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/struggles_and_accomplishments_design"
+                        android:ems="10"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="12dp" />
 
-</ScrollView>
+
+                <EditText
+                        android:id="@+id/username_account_setting_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/struggles_and_accomplishments_design"
+                        android:ems="10"
+                        android:hint="username:"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+
+                <EditText
+                        android:id="@+id/about_account_setting_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+
+                        android:background="@drawable/struggles_and_accomplishments_design"
+                        android:ems="10"
+                        android:hint="About: max space 90"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <Spinner
+                            android:id="@+id/struggles_spinner"
+                            android:layout_width="0dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/struggles_and_accomplishments_design"
+                            android:visibility="gone"
+                            android:entries="@array/struggles"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/logout_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="Logout"
+                    app:layout_constraintBottom_toTopOf="@+id/delete_account_Btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <Button
+                    android:id="@+id/delete_account_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Delete Account"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logout_btn"
+                    app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 
 </RelativeLayout>

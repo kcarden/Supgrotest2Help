@@ -7,24 +7,27 @@ class Post {
     private var postimage: String = ""
     private var publisher: String = ""
     private var posttext: String = ""
+    private var posttypetwotext: String = ""
+
 
 
     constructor()
-    constructor(postid: String, caption: String, postimage: String, publisher: String) {
+    constructor(postid: String, caption: String, postimage: String, publisher: String, posttypetwotext: String, posttext: String) {
         this.postid = postid
         this.caption = caption
         this.postimage = postimage
         this.publisher = publisher
         this.posttext = posttext
+        this.posttypetwotext = posttypetwotext
 
     }
 //___________________________________________
 
-    fun getPostId(): String{
-        return postid
+    fun getPostTypeTwoText(): String{
+        return posttypetwotext
     }
-    fun setPostId(postid: String){
-        this.postid = postid
+    fun setPostTypeTwoText(posttypetwotext: String){
+        this.posttypetwotext = posttypetwotext
     }
 //___________________________________________
 
@@ -58,5 +61,16 @@ class Post {
     fun setPostText(posttext: String){
         this.posttext = posttext
     }
+
+    //___________________________________________
+
+    fun getPostId(): String{
+        return postid
+    }
+    fun setPostId(postid: String){
+        this.postid = postid
+    }
+
+
 
 }
