@@ -9,12 +9,22 @@
     <string name="title_activity_main_feed">MainActivity</string>
     <string name="postCountTxt">0</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="username">Username</string>
+    <string name="struggle">Struggle</string>
+    <string name="supporters">Supporters:</string>
+    <string name="post">Post:</string>
+    <string name="supporting">Supporting:</string>
+    <string name="full_name">Full Name</string>
+    <string name="message">Message</string>
+    <string name="questions">Questions</string>
+    <string name="my_post">My Post</string>
+    <string name="my_fav_s">My Fav\'s</string>
 
     <string-array name="struggles">
         <item>Struggles</item>
         <item>self-harm</item>
         <item>Depression</item>
-        <item>Ahdh</item>
+        <item>Adhd</item>
         <item>Bipolar Disorder</item>
         <item>(ED)Eating Disorder</item>
         <item>(PTSD)Post Traumatic Stress Disorder</item>

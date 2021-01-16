@@ -98,7 +98,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <TextView
-                    android:id="@+id/supporters_Count_txt"
+                    android:id="@+id/supporters_number_txtview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -111,15 +111,15 @@
                     app:layout_constraintTop_toTopOf="@+id/textView6" />
 
             <TextView
-                    android:id="@+id/supporting_Count_Txt"
+                    android:id="@+id/supporting_Txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="0"
                     android:textColor="@color/design_default_color_on_secondary"
                     app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                    app:layout_constraintEnd_toEndOf="@+id/supporters_Count_txt"
-                    app:layout_constraintTop_toBottomOf="@+id/supporters_Count_txt" />
+                    app:layout_constraintEnd_toEndOf="@+id/supporters_number_txtview"
+                    app:layout_constraintTop_toBottomOf="@+id/supporters_number_txtview" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/add_profile_image"
@@ -219,7 +219,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/top_header">
 
             <TextView
-                    android:id="@+id/grid_view_btn"
+                    android:id="@+id/my_post_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
@@ -247,15 +247,15 @@
                     android:paddingRight="8dp"
                     android:paddingBottom="3dp"
                     android:text="My Post"
-                    app:layout_constraintBottom_toBottomOf="@+id/saved_Filled_btn"
-                    app:layout_constraintEnd_toStartOf="@+id/saved_Filled_btn"
+                    app:layout_constraintBottom_toBottomOf="@+id/saved_Filled_btn_txt"
+                    app:layout_constraintEnd_toStartOf="@+id/saved_Filled_btn_txt"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/grid_view_btn"
-                    app:layout_constraintTop_toTopOf="@+id/saved_Filled_btn"
+                    app:layout_constraintStart_toEndOf="@+id/my_post_txt"
+                    app:layout_constraintTop_toTopOf="@+id/saved_Filled_btn_txt"
                     app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                    android:id="@+id/saved_Filled_btn"
+                    android:id="@+id/saved_Filled_btn_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"

@@ -66,16 +66,17 @@
                 android:src="@drawable/image"
                 android:visibility="gone" />
 
-        <TextView
+
+        <ImageView
                 android:id="@+id/text_btn_add_secondType_post"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/text_post_layout"
-                android:gravity="center"
-                android:text="New Text Type!"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp"
+                android:background="#85FF2D00"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/board" />
 
         <ImageButton
                 android:id="@+id/text_btn_add_post"
@@ -84,6 +85,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edittext_layout_design"
                 android:paddingTop="5dp"
+                android:layout_marginBottom="16dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/add_text" />

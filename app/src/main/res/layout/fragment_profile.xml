@@ -1,496 +1,499 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-    <androidx.cardview.widget.CardView
-            android:id="@+id/app_bar_profile_cardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardElevation="3dp"
-            app:cardCornerRadius="5dp"
-            android:layout_margin="2dp">
-
-        <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/app_bar_layout_profile"
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
-
-
-            <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/profile_toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@android:color/white">
-
-
-                <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="15dp"
-                        >
-
-                    <TextView
-                            android:id="@+id/profile_fragment_username"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Username"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black"
-                            android:layout_centerVertical="true"
-
-                            >
-
-                    </TextView>
-
-                    <Button
-                            android:id="@+id/edit_Profile_Btn"
-                            android:layout_width="104dp"
-                            android:layout_height="30dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_marginBottom="8dp"
-                            android:background="@drawable/searchbox_navi_style"
-                            android:text="@string/edit_profile"
-                            android:textSize="12sp" />
-
-
-                </RelativeLayout>
-
-            </androidx.appcompat.widget.Toolbar>
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    // -------------------------------------------------------------------
-
-    <androidx.cardview.widget.CardView
-            android:id="@+id/struggle_profile_cardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/app_bar_profile_cardView"
-            app:cardCornerRadius="5dp"
-            android:layout_margin="2dp">
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <RelativeLayout
-                    android:layout_width="122dp"
-                    android:layout_height="wrap_content">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/struggle_container"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                    <TextView
-                            android:id="@+id/struggles_txtVw"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:background="@drawable/struggle_btn_background"
-                            android:lines="1"
-                            android:text="Struggle"
-                            android:textAlignment="center"
-                            android:textColor="@android:color/white"
-                            app:layout_constraintEnd_toEndOf="@+id/supporters_Count_txt"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/textView13"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="105dp"
-                            android:layout_height="24dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="24dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/struggles_txtVw" />
-
-                    <TextView
-                            android:id="@+id/textView14"
-                            android:layout_width="105dp"
-                            android:layout_height="24dp"
-                            android:layout_marginTop="8dp"
-                            app:layout_constraintEnd_toEndOf="@+id/textView13"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/textView13"
-                            app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-                    <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="105dp"
-                            android:layout_height="24dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="24dp"
-                            app:layout_constraintEnd_toEndOf="@+id/textView14"
-                            app:layout_constraintTop_toBottomOf="@+id/textView7"
-                            app:layout_constraintVertical_bias="0.0" />
-
-                    <TextView
-                            android:id="@+id/supporting_Count_Txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginEnd="8dp"
-                            android:text="0"
-                            android:textColor="@color/design_default_color_on_secondary"
-                            app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                            app:layout_constraintEnd_toEndOf="@+id/textView14"
-                            app:layout_constraintStart_toEndOf="@+id/textView7" />
-
-                    <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="19dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="Supporters:"
-                            android:textColor="@color/design_default_color_on_secondary"
-                            app:layout_constraintBottom_toBottomOf="@+id/textView13"
-                            app:layout_constraintStart_toStartOf="@+id/textView13"
-                            app:layout_constraintTop_toTopOf="@+id/textView13"
-                            app:layout_constraintVertical_bias="0.53" />
-
-                    <TextView
-                            android:id="@+id/textView9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="48dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="Post:"
-                            android:textColor="@color/design_default_color_on_secondary"
-                            app:layout_constraintBottom_toBottomOf="@+id/textView15"
-                            app:layout_constraintStart_toStartOf="@+id/textView15"
-                            app:layout_constraintTop_toTopOf="@+id/textView15"
-                            app:layout_constraintVertical_bias="0.52" />
-
-                    <TextView
-                            android:id="@+id/post_count_txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:text="@string/postCountTxt"
-                            android:textColor="@color/design_default_color_on_secondary"
-                            app:layout_constraintBottom_toBottomOf="@+id/textView9"
-                            app:layout_constraintEnd_toEndOf="@+id/textView15"
-                            app:layout_constraintHorizontal_bias="1.0"
-                            app:layout_constraintStart_toEndOf="@+id/textView9"
-                            app:layout_constraintTop_toTopOf="@+id/textView9"
-                            app:layout_constraintVertical_bias="0.0" />
-
-                    <TextView
-                            android:id="@+id/textView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="Supporting:"
-                            android:textColor="@color/design_default_color_on_secondary"
-                            app:layout_constraintBottom_toBottomOf="@+id/textView14"
-                            app:layout_constraintStart_toStartOf="@+id/textView14"
-                            app:layout_constraintTop_toTopOf="@+id/textView14"
-                            app:layout_constraintVertical_bias="0.51" />
-
-                    <TextView
-                            android:id="@+id/supporters_Count_txt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:text="0"
-                            android:textColor="@color/design_default_color_on_secondary"
-                            app:layout_constraintBottom_toTopOf="@+id/textView13"
-                            app:layout_constraintEnd_toEndOf="@+id/textView13"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toEndOf="@+id/textView6"
-                            app:layout_constraintTop_toTopOf="@+id/textView6"
-                            app:layout_constraintVertical_bias="0.0" />
-
-                    <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/guideline14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintGuide_begin="311dp" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
 
 
-                    <TextView
-                            android:id="@+id/profile_fragment_fullname"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="Full Name"
-                            android:textColor="@color/design_default_color_on_secondary"
-                            app:layout_constraintEnd_toEndOf="@+id/add_profile_image"
-                            app:layout_constraintStart_toStartOf="@+id/add_profile_image"
-                            app:layout_constraintTop_toTopOf="parent" />
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/add_profile_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/avataphoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/add_profile_image2"
-                            android:layout_width="110dp"
-                            android:layout_height="110dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:src="@color/cardview_dark_background"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.029"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/profile_fragment_fullname" />
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/add_profile_image"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/avataphoto"
-                            app:layout_constraintBottom_toBottomOf="@+id/add_profile_image2"
-                            app:layout_constraintEnd_toEndOf="@+id/add_profile_image2"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toStartOf="@+id/add_profile_image2"
-                            app:layout_constraintTop_toTopOf="@+id/add_profile_image2"
-                            app:layout_constraintVertical_bias="0.50" />
-
-                    <ImageView
-                            android:id="@+id/ask_question_Btn"
-                            android:layout_width="38dp"
-                            android:layout_height="48dp"
-                            android:layout_marginStart="32dp"
-                            android:src="@drawable/information"
-                            android:visibility="gone"
-                            app:layout_constraintBottom_toBottomOf="@+id/add_profile_image"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.281"
-                            app:layout_constraintStart_toEndOf="@+id/add_profile_image"
-                            app:layout_constraintTop_toTopOf="@+id/add_profile_image"
-                            app:layout_constraintVertical_bias="0.483" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-            android:id="@+id/about_me_cardView"
+    <TextView
+            android:id="@+id/struggles_txtVw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/struggle_profile_cardView"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
-            app:cardCornerRadius="5dp"
-            >
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/struggle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_profile_image" />
 
 
-            <TextView
-                    android:id="@+id/profile_fragment_about_me"
-                    android:layout_width="match_parent"
-                    android:layout_height="69dp"
-                    android:justificationMode="inter_word"
-                    android:lines="3"
-                    android:maxLength="90"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="2dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="2dp"
-                    android:textAlignment="center"
-                    android:textColor="@color/design_default_color_on_secondary"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.504"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-            android:id="@+id/post_and_myFav_cardView"
-            android:layout_width="match_parent"
+    <TextView
+            android:id="@+id/message_user_profile_btn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/about_me_cardView"
-            app:cardCornerRadius="5dp"
-            >
+            android:layout_marginStart="8dp"
+            android:background="@drawable/edit_btn"
+            android:fontFamily="@font/poppins"
+            android:padding="10dp"
+            android:text="Message"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/add_profile_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.106"
+            app:layout_constraintStart_toEndOf="@+id/add_profile_image"
+            app:layout_constraintTop_toTopOf="@+id/add_profile_image"
+            app:layout_constraintVertical_bias="0.534" />
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/about_constraint_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/struggles_txtVw">
+
+        <TextView
+                android:id="@+id/profile_fragment_username"
+                android:layout_width="365dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/username"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/middle_header"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginTop="3dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.21"
+                android:id="@+id/constraintLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/profile_fragment_username"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/top_header">
+                app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                    android:id="@+id/about_me_btn"
+                    android:id="@+id/post_count_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-                    android:background="@drawable/searchbox_navi_style"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="3dp"
-                    android:text="Questions"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="@+id/saved_Filled_btn"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintHorizontal_chainStyle="spread_inside"
-                    app:layout_constraintStart_toEndOf="@+id/saved_Filled_btn"
-                    app:layout_constraintTop_toTopOf="@+id/saved_Filled_btn" />
-
-            <TextView
-                    android:id="@+id/grid_view_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="24dp"
-                    android:background="@drawable/searchbox_navi_style"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="3dp"
-                    android:text="My Post"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/saved_Filled_btn"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                    android:id="@+id/saved_Filled_btn"
+                    android:id="@+id/textView31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="50dp"
-                    android:background="@drawable/searchbox_navi_style"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="3dp"
-                    android:text="My Fav's"
-                    app:layout_constraintBottom_toBottomOf="@+id/grid_view_btn"
-                    app:layout_constraintEnd_toStartOf="@+id/about_me_btn"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/grid_view_btn"
-                    app:layout_constraintTop_toTopOf="@+id/grid_view_btn" />
-
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Posts"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/post_count_txt"
+                    app:layout_constraintStart_toEndOf="@+id/post_count_txt"
+                    app:layout_constraintTop_toTopOf="@+id/post_count_txt" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/supporters_Count_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/supporting_Count_Txt"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_fragment_username">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                    android:id="@+id/supporters_number_txtview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-            android:id="@+id/bottom_layer_cardView"
+            <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Supporters"
+                    app:layout_constraintBottom_toBottomOf="@+id/supporters_number_txtview"
+                    app:layout_constraintStart_toEndOf="@+id/supporters_number_txtview"
+                    app:layout_constraintTop_toTopOf="@+id/supporters_number_txtview" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/supporting_Count_Txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/supporters_Count_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/supporters_Count_txt"
+                app:layout_constraintTop_toTopOf="@+id/supporters_Count_txt">
+
+            <TextView
+                    android:id="@+id/supporting_Txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Supporting"
+                    app:layout_constraintBottom_toBottomOf="@+id/supporting_Txt"
+                    app:layout_constraintStart_toEndOf="@+id/supporting_Txt"
+                    app:layout_constraintTop_toTopOf="@+id/supporting_Txt" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/profile_fragment_about_me"
+                android:layout_width="292dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:hint="tell us about, you..."
+                android:lines="3"
+                android:maxLength="120"
+                android:paddingLeft="8dp"
+                android:paddingTop="2dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="2dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supporters_Count_txt" />
+
+        <TextView
+                android:id="@+id/edit_Profile_Btn"
+                android:layout_width="292dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_btn"
+                android:fontFamily="@font/poppins"
+                android:padding="5dp"
+                android:text="@string/edit_profile"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_fragment_about_me" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_constraint_layout">
+
+        <TextView
+                android:id="@+id/my_post_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/post_fav_outline"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="My Post"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/saved_Filled_btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/post_fav_outline"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                android:text="My Fave's"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/personal_quotes_constraint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/post_fav_outline"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:visibility="gone">
+
+            <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Personal Quote"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.45" />
+
+            <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/personal_quotes_notifications"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView48"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.136"
+                    app:layout_constraintStart_toEndOf="@+id/textView48"
+                    app:layout_constraintTop_toTopOf="@+id/textView48"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:ignore="RtlCompat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_saved_post"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_grid_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="140dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="85dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+            android:id="@+id/expand_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/message_user_profile_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout9"
+            app:layout_constraintTop_toTopOf="@+id/message_user_profile_btn"
+            app:layout_constraintVertical_bias="0.411"
+            app:srcCompat="@drawable/expand" />
+
+    <ImageView
+            android:id="@+id/collapse_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/message_user_profile_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout9"
+            app:layout_constraintTop_toTopOf="@+id/message_user_profile_btn"
+            app:layout_constraintVertical_bias="0.411"
+            app:srcCompat="@drawable/expand" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tinted_constraint"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/post_and_myFav_cardView"
-            app:cardElevation="3dp"
-            app:cardCornerRadius="5dp"
-            android:layout_margin="2dp"
-            >
-
-        <RelativeLayout
-                android:id="@+id/bottom_header"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-
-            <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_view_saved_post"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:forceHasOverlappingRendering="true"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraint_about_me_post"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="gone"
-
-                    >
-
-                <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_view_grid_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.072" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            android:background="#9CC3C3C3"
+            android:backgroundTint="#685D5D"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_view_questions_page"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:forceHasOverlappingRendering="true"
-                    android:visibility="gone"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_supporters"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/profile_user_account"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
 
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supporters_close_btn" />
+
+        <ImageView
+                android:id="@+id/supporters_close_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/close_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tinted_constraint_supporting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#9CC3C3C3"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_supporting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/profile_user_account"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/supporting_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supportering_close_btn" />
+
+        <ImageView
+                android:id="@+id/supportering_close_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/close_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

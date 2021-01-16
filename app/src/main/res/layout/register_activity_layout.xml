@@ -1,144 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Controller.Service.Register_Activity"
-        android:background="@android:color/holo_red_light">
-    <LinearLayout
-            android:orientation="vertical"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-50dp">
+
+
         <TextView
-                android:text="Create Your Account"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView2" android:textAlignment="center"
-                android:layout_marginTop="8dp" android:textStyle="bold" android:textColor="@android:color/white"/>
+                android:id="@+id/textView43"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Create an account"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/textView44"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Username"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
         <EditText
                 android:id="@+id/usernameRegEdTxt"
-                style="@android:style/Widget.Material.Light.EditText"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginRight="24dp"
-                android:backgroundTint="#FFFFFF"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/signin_register_textbox"
                 android:ems="10"
-                android:hint="username"
+                android:fontFamily="@font/poppins"
                 android:inputType="textPersonName"
-                android:textColorHint="@android:color/white" />
+                android:padding="10dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+        <TextView
+                android:id="@+id/textView47"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/usernameRegEdTxt" />
 
         <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:backgroundTint="#FFFFFF"
-                android:textColorHint="@android:color/white"
                 android:id="@+id/emailRegEdTxt"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp"
-                android:hint="email "/>
-        <EditText
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/signin_register_textbox"
+                android:ems="10"
                 android:inputType="textEmailAddress"
-                android:ems="10"
-                android:backgroundTint="#FFFFFF"
-                android:textColorHint="@android:color/white"
-                android:id="@+id/confirmEmailRegEdTxt" android:layout_marginLeft="24dp" android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp" android:hint="confirm email"/>
+                android:padding="10dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView47" />
 
+        <TextView
+                android:id="@+id/textView49"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Fullname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailRegEdTxt" />
 
         <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/fullnameRegEdTxt"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/signin_register_textbox"
                 android:ems="10"
-                android:backgroundTint="#FFFFFF"
-                android:textColorHint="@android:color/white"
-                android:id="@+id/fullnameRegEdTxt" android:layout_marginLeft="24dp" android:layout_marginRight="24dp"
-                android:layout_marginTop="16dp" android:hint="full name" android:textColor="@android:color/white"
-                style="@android:style/Widget.Material.Light.EditText"/>
+                android:fontFamily="@font/poppins"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+        <TextView
+                android:id="@+id/textView50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Age"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fullnameRegEdTxt" />
 
         <EditText
                 android:id="@+id/ageRegEdTxt"
-                android:layout_width="match_parent"
+                android:layout_width="53dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_weight="1"
-                android:backgroundTint="#FFFFFF"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/signin_register_textbox"
                 android:ems="10"
-                android:hint="age "
+                android:fontFamily="@font/poppins"
                 android:inputType="number"
-                android:textColorHint="@android:color/white">
-
-        </EditText>
-
+                android:padding="10dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView50"
+                app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
         <Spinner
                 android:id="@+id/struggles"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginRight="24dp"
-                android:background="@drawable/struggles_and_accomplishments_design"
-                android:entries="@array/struggles" />
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/signin_register_textbox"
+                android:entries="@array/struggles"
+                android:fontFamily="@font/poppins"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ageRegEdTxt" />
 
-
-
-
-
+        <TextView
+                android:id="@+id/textView52"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/struggles" />
 
         <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/passwordRegEdTxt"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/signin_register_textbox"
                 android:ems="10"
-                android:backgroundTint="#FFFFFF"
-                android:textColorHint="@android:color/white"
-                android:id="@+id/passwordRegEdTxt" android:layout_marginLeft="24dp" android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp" android:hint="password"/>
+                android:fontFamily="@font/poppins"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+        <TextView
+                android:id="@+id/textView53"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Confirm Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/passwordRegEdTxt" />
 
         <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:backgroundTint="#FFFFFF"
-                android:textColorHint="@android:color/white"
                 android:id="@+id/comfirmPasswordRegEdTxt"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp"
-                android:hint="confirm password"></EditText>
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/signin_register_textbox"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
         <CheckBox
-                android:text="Agreement"
+                android:id="@+id/agreementCheckBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/agreementCheckBox" android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp" android:layout_marginTop="8dp"
-                android:textColor="@android:color/white"/>
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:fontFamily="@font/poppins"
+                android:text="Agreement"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comfirmPasswordRegEdTxt" />
 
         <Button
                 android:id="@+id/signupRegBtn"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/buttons_rounded_corner"
-                android:text="create account"
-                android:textColor="@android:color/white" />
-    </LinearLayout>
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="20dp"
+                android:text="Create Account"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/agreementCheckBox" />
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

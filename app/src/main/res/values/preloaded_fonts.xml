@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/abeezee</item>
+        <item>@font/abril_fatface</item>
+        <item>@font/advent_pro_thin</item>
+        <item>@font/amatic_sc</item>
+        <item>@font/anaheim</item>
         <item>@font/averia_serif_libre_light</item>
+        <item>@font/bad_script</item>
+        <item>@font/bevan</item>
+        <item>@font/bitter</item>
+        <item>@font/bungee_inline</item>
+        <item>@font/cairo_extralight</item>
+        <item>@font/cambay</item>
+        <item>@font/caveat</item>
+        <item>@font/cherry_cream_soda</item>
         <item>@font/montserrat</item>
+        <item>@font/poppins</item>
+        <item>@font/poppins_light</item>
+        <item>@font/poppins_medium</item>
     </array>
 </resources>
